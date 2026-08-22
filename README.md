@@ -2,7 +2,7 @@
 
 A demo redesign of the Brew and Bean Cafe e-commerce website, built to address trust, presentation, and SEO issues identified in an initial research & SEO audit.
 
-> **Note on source material and project intent:** The initial plan was to build a website redesign directly based on the Frozen Bottle research documents (Research & SEO Audit, Design Concept, Technical Stack proposal) — a vegetarian dessert/milkshake franchise brand. That plan evolved: Frozen Bottle's own site was found to already be a good, well-maintained website, so rather than continuing a literal redesign of it, the decision was made to build **this site to compete with Frozen Bottle** — an independent demo (Brew and Bean Cafe) built to test our own limits and ability to design and build a website that matches or surpasses that standard. As a result, the actual demo build (see Section 3) is an independent coffee-brand concept with its own content and tech stack, rather than a direct implementation of the original Frozen Bottle documents. Where this README describes the live demo, it's based directly on the attached screen recording of the running site and the project's actual `package.json`/source files — not assumed.
+> **Note on source material and project intent:** The initial plan was to build a website redesign directly based on the Frozen Bottle research documents (Research & SEO Audit, Design Concept, Technical Stack proposal) — a vegetarian dessert/milkshake franchise brand. That plan evolved: Frozen Bottle's own site was found to already be a good, well-maintained website, so rather than continuing a literal redesign of it, the decision was made to build **this site to compete with Frozen Bottle** — an independent demo (Brew and Bean Cafe) built to test our own limits and ability to design and build a website that matches or surpasses that standard. As a result, the actual demo build (see Section 3) is an independent coffee-brand concept with its own content and tech stack, rather than a direct implementation of the original Frozen Bottle documents. Where this README describes the live demo, it's based directly on the attached screen recording of the running site and the project's actual `package.json`/source files
 
 ---
 
@@ -25,8 +25,6 @@ git checkout hafiz-branch
 
 ## 2. Tech Stack
 
-Confirmed directly from `package.json` on `hafiz-branch`:
-
 - **Build tool:** Vite
 - **Framework:** React
 - **React plugin:** `@vitejs/plugin-react`
@@ -39,9 +37,6 @@ Confirmed directly from `package.json` on `hafiz-branch`:
 > **Correction from the original Technical Stack proposal:** That document recommended Next.js, Tailwind CSS, Framer Motion, ReactBits, and Aceternity UI. None of those appear in the actual `package.json`. The real build is a lean Vite + React + Lenis stack — simpler than what was originally proposed. This README reflects the real dependency list, not the earlier proposal.
 
 ## 2a. Project Structure
-
-Confirmed directly from the `src/` folder on `hafiz-branch`:
-
 ```
 src/
   App.jsx      # Main application component
