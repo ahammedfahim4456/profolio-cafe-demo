@@ -205,14 +205,30 @@ function App() {
     {booting && <Splash leaving={splashLeaving} />}
     <Pointer />
     <div className={`menu-panel ${menu ? 'open' : ''}`} id="site-menu" aria-hidden={!menu}><button className="menu-close interactive" onClick={() => setMenu(false)} aria-label="Close menu"><span>CLOSE</span><i /><i /></button><a href="#about" onClick={() => setMenu(false)}>About</a><a href="#favourites" onClick={() => setMenu(false)}>Favourites</a><a href="#enterprise" onClick={() => setMenu(false)}>Enterprise</a><a href="#contact" onClick={() => setMenu(false)}>Contact</a></div>
-    <nav className="topbar">
-      <a href="#top" className="brand interactive"><img src="/logo.png" alt="Brew and Bean logo" className="brand-mark-img" /><span>BREW AND BEAN</span></a>
-      <button className="menu-button" onClick={() => setMenu(!menu)} aria-expanded={menu} aria-controls="site-menu"><span>MENU</span><i /><i /></button>
-    </nav>
     <main>
       <section className="hero" id="top">
         <div className="hero-media"><img src={photos.hero} alt="Brew and Bean espresso machine" fetchPriority="high" /></div>
         <div className="hero-wash" />
+        <nav className="topbar">
+          <a href="#top" className="brand interactive">
+            <span className="brand-mark" style={{ transform: 'none' }}>
+              <svg viewBox="0 0 100 100" fill="none" width="34" height="34" style={{ display: 'inline-block', verticalAlign: 'middle' }}>
+                <path d="M 18 10 H 82 L 67 38 H 33 Z" stroke="currentColor" strokeWidth="4.5" strokeLinejoin="round" strokeLinecap="round" />
+                <path d="M 50 10 V 38" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+                <path d="M 34 10 L 42 38" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+                <path d="M 66 10 L 58 38" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+                <path d="M 22 10 L 37 38" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+                <path d="M 78 10 L 63 38" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+                <path d="M 31 43 H 69 C 71.5 43, 71.5 49, 69 49 H 31 C 28.5 49, 28.5 43, 31 43 Z" fill="currentColor" />
+                <path d="M 34 49 C 30 56, 17 65, 17 78 C 17 87, 26 89, 34 89 H 66 C 74 89, 83 87, 83 78 C 83 65, 70 56, 66 49" stroke="currentColor" strokeWidth="4.5" strokeLinejoin="round" strokeLinecap="round" />
+                <path d="M 68 53 H 82 C 86.5 53, 90 57, 88 68 L 84 76 C 82 78, 77 78, 74 76" stroke="currentColor" strokeWidth="4" strokeLinejoin="round" strokeLinecap="round" />
+                <path d="M 21 68 H 79 C 80 73, 81.5 77, 81.5 79 C 81.5 84.5, 75 87.5, 66 87.5 H 34 C 25 87.5, 18.5 84.5, 18.5 79 C 18.5 77, 20 73, 21 68 Z" fill="currentColor" />
+              </svg>
+            </span>
+            <span>BREW AND BEAN</span>
+          </a>
+          <button className="menu-button" onClick={() => setMenu(!menu)} aria-expanded={menu} aria-controls="site-menu"><span>MENU</span><i /><i /></button>
+        </nav>
         <h1>THE PRECISION<br />OF <em>EXTRACTION</em></h1>
         <a className="scroll-note interactive" href="#about">SCROLL TO CONTINUE <span>↓</span></a>
         <div className="hero-index">EST. 2018 / BENGALURU</div>
