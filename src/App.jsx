@@ -205,14 +205,14 @@ function App() {
     {booting && <Splash leaving={splashLeaving} />}
     <Pointer />
     <div className={`menu-panel ${menu ? 'open' : ''}`} id="site-menu" aria-hidden={!menu}><button className="menu-close interactive" onClick={() => setMenu(false)} aria-label="Close menu"><span>CLOSE</span><i /><i /></button><a href="#about" onClick={() => setMenu(false)}>About</a><a href="#favourites" onClick={() => setMenu(false)}>Favourites</a><a href="#enterprise" onClick={() => setMenu(false)}>Enterprise</a><a href="#contact" onClick={() => setMenu(false)}>Contact</a></div>
+    <nav className="topbar">
+      <a href="#top" className="brand interactive"><img src="/logo.png" alt="Brew and Bean logo" className="brand-mark-img" /><span>BREW AND BEAN</span></a>
+      <button className="menu-button" onClick={() => setMenu(!menu)} aria-expanded={menu} aria-controls="site-menu"><span>MENU</span><i /><i /></button>
+    </nav>
     <main>
       <section className="hero" id="top">
         <div className="hero-media"><img src={photos.hero} alt="Brew and Bean espresso machine" fetchPriority="high" /></div>
         <div className="hero-wash" />
-        <nav className="topbar">
-          <a href="#top" className="brand interactive"><span className="brand-mark">◒</span><span>BREW AND BEAN</span></a>
-          <button className="menu-button" onClick={() => setMenu(!menu)} aria-expanded={menu} aria-controls="site-menu"><span>MENU</span><i /><i /></button>
-        </nav>
         <h1>THE PRECISION<br />OF <em>EXTRACTION</em></h1>
         <a className="scroll-note interactive" href="#about">SCROLL TO CONTINUE <span>↓</span></a>
         <div className="hero-index">EST. 2018 / BENGALURU</div>
